@@ -8,3 +8,5 @@ resource "aws_instance" "ntg" {
     }
   
 }
+
+# If you are getting any error logging in the Ec2 and the Web HTML page check the security group Inbound rules and set to http and all traffic
