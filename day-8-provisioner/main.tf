@@ -73,7 +73,7 @@ resource "aws_instance" "instance" {
 
 
 #From here on we will use the Bastion Host method liek we usually connect through third party tools to connect to the instance and for that we will need the private key and the type of port used to connect 
-#Botht the connection and provisioner block should be present in the same resource blok whcih we are trying to conect
+#Both the connection and provisioner block should be present in the same resource blok whcih we are trying to conect
 
 connection {
     type = "ssh"
