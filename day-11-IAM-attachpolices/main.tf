@@ -5,7 +5,7 @@ resource "aws_iam_user" "firstuser" {
 
 #Assiging the access key i.e., programmatical approach to the user
 resource "aws_iam_access_key" "accesskey" {
-    user = aws_iam_user.firstuser.id
+    user = aws_iam_user.firstuser.id      # It is better to use name instead of id for these cases 
   
 }
 
@@ -29,7 +29,7 @@ resources = [
 # Attaching the policy to the user 
 resource "aws_iam_user_policy" "s3policiesattachment" {
     name = "s3inlinepolicy"
-    user = aws_iam_user.firstuser.id
+    user = aws_iam_user.firstuser.id           # It is better to use name instead of id for these cases
     policy = data.aws_iam_policy_document.s3permissions.json
   
 }

@@ -10,7 +10,7 @@ pipeline {
 
         stage('Terraform Init') {
             steps {
-                dir('day-2-terraform') {  // Giving this directory path at every satge is importan otherwise you will get error
+                dir('day-2-terraform') {  // Giving this directory path at every satge is important otherwise you will get error
                     sh 'terraform init'
                 }
             }
