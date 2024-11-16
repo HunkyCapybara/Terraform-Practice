@@ -8,8 +8,20 @@ resource "aws_instance" "lyfcyl" {
     }
 
  
-#This means that Terraform will never update the object but will be able to create or destroy it.
-#I mean in this case we have given the command to ignore the tags and it will ignore the tags name 
+# Real-world example of why this is useful:
+
+# You create the EC2 instance with the tag Name = "namiwamo"
+# Later, someone manually adds another tag in AWS Console like Environment = "Testing"
+# Without the lifecycle block:
+
+# Next terraform apply would remove the Environment tag
+# Terraform would try to maintain exactly what's in the code
+
+
+# With the lifecycle block:
+
+# The manually added Environment tag stays
+# Terraform ignores changes to tags
 #lifecycle {
  # ignore_changes = [ tags, ]
 #}

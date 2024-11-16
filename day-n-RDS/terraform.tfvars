@@ -1,0 +1,7 @@
+main_Engine = "MySQL"
+main_Engineversion = "5.7"
+main_identifier = "dbterraform"
+main_instanceclass = "db.t3.micro"
+main_username = "hunkycapybara"
+main_password = "ASD6as!123"
+main_vpc = "vpc-04ed51b8380806a07"
